@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component, Fragment } from "react";
+import { Button, Space, message, ConfigProvider } from 'antd';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+    //提示框 
+    handleClick = () => {
+        message.success('成功了！！！！');
+    }
+
+    render() {
+        return (
+            <Fragment>
+                <ConfigProvider
+                    theme={{
+                        token: {
+                            colorPrimary: '#00b96b', //自定义主题颜色
+                        },
+                    }}
+                >
+                    <Button type="primary" onClick={this.handleClick}>
+                        按钮
+                    </Button>
+                </ConfigProvider>
+            </Fragment>
+        )
+    }
 }
-
-export default App;
+export default App
