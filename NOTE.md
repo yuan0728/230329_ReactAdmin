@@ -14,5 +14,6 @@ git 克隆代码：git clone + 代码路径
     下载工具包：
         yarn add less less-loader
     下载路由包: react-router-dom
-测试
+### 路由
+react-router-dom@6中的Routes组件取代了Switch组件。此外，Route组件API也发生了变化，不再使用component、render和children函数属性，而是使用单个element属性，该属性取React.ReactNode（又名JSX）值
     
